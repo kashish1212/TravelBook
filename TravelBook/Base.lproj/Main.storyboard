@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TravelBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Y0I-Uh-Qbb">
+                                <rect key="frame" x="0.0" y="221" width="375" height="469"/>
+                            </mapView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wde-24-3I1">
+                                <rect key="frame" x="16" y="61" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="comment" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4bu-Zb-axm">
+                                <rect key="frame" x="16" y="123" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6M-Yd-dbY">
+                                <rect key="frame" x="138" y="726" width="99" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5s7-Gj-rH9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Wde-24-3I1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="2J7-Im-Elj"/>
+                            <constraint firstItem="G6M-Yd-dbY" firstAttribute="top" secondItem="Y0I-Uh-Qbb" secondAttribute="bottom" constant="36" id="7Br-IO-VTn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Y0I-Uh-Qbb" secondAttribute="trailing" id="7Qq-F8-Hyu"/>
+                            <constraint firstItem="G6M-Yd-dbY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="138" id="AHk-p5-uGQ"/>
+                            <constraint firstItem="Y0I-Uh-Qbb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="177" id="Cgk-lk-lfH"/>
+                            <constraint firstItem="Wde-24-3I1" firstAttribute="centerX" secondItem="G6M-Yd-dbY" secondAttribute="centerX" id="MOW-yv-rR9"/>
+                            <constraint firstItem="4bu-Zb-axm" firstAttribute="centerX" secondItem="Y0I-Uh-Qbb" secondAttribute="centerX" id="NKD-As-gxf"/>
+                            <constraint firstItem="Y0I-Uh-Qbb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aRu-ub-Wr0"/>
+                            <constraint firstItem="Wde-24-3I1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="17" id="f2Z-EW-VUM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Y0I-Uh-Qbb" secondAttribute="bottom" constant="88" id="fdF-qe-vMz"/>
+                            <constraint firstItem="4bu-Zb-axm" firstAttribute="top" secondItem="Wde-24-3I1" secondAttribute="bottom" constant="28" id="jOy-cb-NJ9"/>
+                            <constraint firstItem="Wde-24-3I1" firstAttribute="trailing" secondItem="4bu-Zb-axm" secondAttribute="trailing" id="qlV-Xo-E6N"/>
+                            <constraint firstItem="Wde-24-3I1" firstAttribute="leading" secondItem="4bu-Zb-axm" secondAttribute="leading" id="wKw-4H-xkp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="MapView" destination="Y0I-Uh-Qbb" id="S0a-SM-Tps"/>
+                        <outlet property="commentText" destination="4bu-Zb-axm" id="lkP-hp-3Gr"/>
+                        <outlet property="nameText" destination="Wde-24-3I1" id="hDu-q3-2qz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.4384236453202"/>
+        </scene>
+    </scenes>
+</document>
